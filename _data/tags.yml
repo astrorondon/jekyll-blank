@@ -1,0 +1,11 @@
+# When creating or altering categories, remember to duplicate your changes to the tag/ folder. Each tag needs to have its own [slug].md page, specifying its layout, tag, and permalink.
+
+first-tag:
+  name: First Tag
+  title: First Tag
+  description: "This is a description for the first tag."
+
+second-tag:
+  name: Second Tag
+  title: Second Tag
+  description: "This is a description for the second tag."

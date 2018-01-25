@@ -1,0 +1,40 @@
+---
+layout: page
+tag: blog
+title: Blog
+static-page: true
+permalink: /blog/
+---
+
+<div id="blog-page">
+  <div class="item-list">
+    {% for post in site.posts %}
+
+      {% unless post.next %}
+        <h2 class="header medium-header dividing-month">{{ post.date | date: '%B %Y' }}</h2>
+      {% else %}
+        {% capture year %}{{ post.date | date: '%Y %B' }}{% endcapture %}
+        {% capture nyear %}{{ post.next.date | date: '%Y %B' }}{% endcapture %}
+        {% if year != nyear %}
+          <h2 class="header medium-header dividing-month">{{ post.date | date: '%B %Y' }}</h2>
+        {% endif %}
+      {% endunless %}
+
+      <div class="item-box">
+        <h2 class="header small-header item-header">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h2>
+
+        <p class="item-description">
+          <span class="post-date">{{ post.date | date: "%d %B" }}
+            <i class="fa fa-angle-double-right date-caret" aria-hidden="true"></i>
+          </span>
+
+          {{ post.description }}
+        </p>
+      </div>
+    {% endfor %}
+  </ul>
+</div>

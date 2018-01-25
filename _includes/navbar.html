@@ -1,0 +1,43 @@
+<nav class="navbar navbar-fixed-top main">
+  <div class="container navbar-container">
+    <ul class="navbar-list navbar-links">
+      <li class="navbar-item">
+        <a class="navbar-link" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      </li>
+
+
+      <div class="right-nav-links">
+
+        <!-- mobile menu button -->
+        <li class="navbar-item mobile-menu-box menu">
+          <a class="navbar-link mobile-button" id="request-menu">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </a>
+        </li>
+
+        <div class="menu-items" id="menu-options">
+          <div class="inner-container">
+            {% for page in site.html_pages %}
+            {% if page.static-page %}
+            <li class="navbar-item"><a class="navbar-link" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+
+            {% for category in site.data.categories %}
+            {% assign slug = category[0] %}
+            {% assign category_data = category[1] %}
+
+            <li class="navbar-item {% if page.tag == slug %}active{% endif %}">
+              <a class="navbar-link" href="{{ site.baseurl }}/{{ slug }}/">
+                {{ category_data.nav-name }}
+              </a>
+            </li>
+            {% endfor %}
+          </div>
+        </div>
+
+      </div>
+
+    </ul>
+  </div>
+</nav>

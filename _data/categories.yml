@@ -1,0 +1,11 @@
+# When creating or altering categories, remember to duplicate your changes to the category/ folder. Each category needs to have its own [slug].md page, specifying its layout, tag, and permalink.
+
+first-category:
+  nav-name: FirstCat
+  title: First Category
+  description: Lorem ipsum dolor sit amet, qui liber dicam scriptorem eu. Laoreet scriptorem ius cu. No fugit inani voluptatibus usu. Eu eos graeco sanctus, meliore detraxit suscipiantur vis in, cum in nusquam dolores.
+
+second-category:
+  nav-name: SecondCat
+  title: Second Category
+  description: Cu nostro omittam eum, vis id delectus senserit, mea iusto appetere at. At vix cibo possit dolorum, eu sit rebum feugait similique. Dolorum consequat eloquentiam in usu. Summo oportere te per. Brute etiam blandit usu ne, dicam dolore nominati est ea.

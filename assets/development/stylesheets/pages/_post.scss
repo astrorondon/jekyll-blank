@@ -1,0 +1,19 @@
+/**
+ * Post page styles for post content and post layout
+ */
+
+.post-page-header {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+
+  .post-description {
+    p {
+      margin-bottom: 1.0rem;
+    }
+  }
+
+  .post-tags {
+    font-size: 1.25rem;
+  }
+}

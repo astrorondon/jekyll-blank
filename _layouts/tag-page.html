@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+{% assign tag = site.data.tags[page.tag] %}
+<div class="container">
+  <div class="page-header">
+    <h1 class="standard-large-header">{{ tag.name }}</h1>
+
+    <div class="item-description">
+      {% capture desc %}{{ tag.description }}{% endcapture %}
+      {{ desc | markdownify }}
+    </div>
+  </div>
+
+  <div class="item-list">
+    {% for post in site.posts %}
+      {% if post.tags contains page.tag %}
+        <div class="item-box">
+          <h2 class="header small-header item-header">
+            <a href="{{ site.baseurl }}{{ post.url }}">
+              {{ post.title }}
+            </a>
+          </h2>
+
+          <p class="item-description">
+            <span class="post-date">{{ post.date | date: "%d %B %Y" }}
+              <i class="fa fa-angle-double-right date-caret" aria-hidden="true"></i>
+            </span>
+
+            {{ post.description }}
+          </p>
+
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

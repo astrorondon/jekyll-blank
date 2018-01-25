@@ -1,0 +1,30 @@
+/**
+ * Category, tag, and page layout styles
+ */
+
+.page-header {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.item-list {
+  .item-box {
+    margin-bottom: 2.0rem;
+  }
+
+  .item-header {
+    margin-bottom: 0.4rem;
+  }
+}
+
+
+.post-date {
+  text-transform: uppercase;
+  color: grey;
+  font-size: 1.2rem;
+
+  .date-caret {
+    padding: 0 1.0rem 0 0.5rem;
+  }
+}
